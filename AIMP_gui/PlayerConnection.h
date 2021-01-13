@@ -34,6 +34,6 @@ namespace AIMPgui{
 	public:
 		static void TakeSong();
 		static System::String^ Wcstos(wchar_t* str, System::String^ temportal = L"", int i = 0);//Конверсия из wchar_t в String^
-			
+		char* WcstoANCII(wchar_t* w_str);		
 	};
 }

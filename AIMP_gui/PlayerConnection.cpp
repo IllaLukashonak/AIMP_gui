@@ -1,5 +1,5 @@
-﻿#include <stringapiset.h>
-
+﻿//#include <stringapiset.h>
+#include <Windows.h>
 #include "PlayerConnection.h"
 
 TCHAR AIMPgui::PlayerConnection::sz_name_[] = TEXT("AIMP2_RemoteInfo");
@@ -75,12 +75,10 @@ System::String^ AIMPgui::PlayerConnection::Wcstos(wchar_t* str, System::String^ 
     return temportal;
 }
 
-char* AIMPgui::PlayerConnection::WcstoANCII(wchar_t* w_str) {
-	int ISO_8859_5 = 28595;
-    char* m_char;
-    int strsize = WideCharToMultiByte(ISO_8859_5, 0, w_str, wcslen(w_str) + 1, NULL, 0, NULL, NULL);
-    m_char = new char[strsize];
-    WideCharToMultiByte(ISO_8859_5, 0, w_str, wcslen(w_str) + 1, m_char, strsize, NULL, NULL);
+char* AIMPgui::PlayerConnection::WcstoANCII(wchar_t* w_str, int codepage) {
+	const int strsize = WideCharToMultiByte(codepage, 0, w_str, wcslen(w_str) + 1, NULL, 0, NULL, NULL);
+    char* m_char = new char[strsize];
+    WideCharToMultiByte(codepage, 0, w_str, wcslen(w_str) + 1, m_char, strsize, NULL, NULL);
     return m_char;
 }
 

@@ -34,6 +34,7 @@ namespace AIMPgui{
 	public:
 		static void TakeSong();
 		static System::String^ Wcstos(wchar_t* str, System::String^ temportal = L"", int i = 0);//Конверсия из wchar_t в String^
-		char* WcstoANCII(wchar_t* w_str);		
+		static char* WcstoANCII(wchar_t* w_str, int codepage = 28595); //28595 - cyrilic, 1252; 28591 - latin
+		static System::String^ ToString(char* str);
 	};
 }

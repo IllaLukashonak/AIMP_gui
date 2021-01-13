@@ -1,4 +1,6 @@
-﻿#include "PlayerConnection.h"
+﻿#include <stringapiset.h>
+
+#include "PlayerConnection.h"
 
 TCHAR AIMPgui::PlayerConnection::sz_name_[] = TEXT("AIMP2_RemoteInfo");
 PBYTE AIMPgui::PlayerConnection::my_buffer_;
@@ -71,6 +73,15 @@ System::String^ AIMPgui::PlayerConnection::Wcstos(wchar_t* str, System::String^ 
         temportal = Wcstos(str, temportal, ++i);
     }
     return temportal;
+}
+
+char* AIMPgui::PlayerConnection::WcstoANCII(wchar_t* w_str) {
+	int ISO_8859_5 = 28595;
+    char* m_char;
+    int strsize = WideCharToMultiByte(ISO_8859_5, 0, w_str, wcslen(w_str) + 1, NULL, 0, NULL, NULL);
+    m_char = new char[strsize];
+    WideCharToMultiByte(ISO_8859_5, 0, w_str, wcslen(w_str) + 1, m_char, strsize, NULL, NULL);
+    return m_char;
 }
 
 void AIMPgui::PlayerConnection::TakeSong() {

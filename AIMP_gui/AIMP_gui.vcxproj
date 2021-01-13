@@ -171,7 +171,6 @@
     <Image Include="res\reload.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Debug\AIMP_gui.exe.config" />
     <None Include="app.config">
       <FileType>Document</FileType>
     </None>

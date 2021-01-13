@@ -76,7 +76,7 @@ System::Void AIMPgui::MyForm::UpdateInfo(String^ artist, String^ title) {
 	lb_SongName->Text = title;
 }
 
-System::Void AIMPgui::MyForm::SendLcd(String^ artist, String^ title) {
+System::Void AIMPgui::MyForm::SendLcd(char* artist, char* title) {
 }
 
 System::Void AIMPgui::MyForm::TreyBalloon(String^ artist, String^ title) {

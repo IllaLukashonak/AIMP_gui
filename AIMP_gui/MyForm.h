@@ -274,7 +274,7 @@ namespace AIMPgui {
 	private: System::Void UpdateAll();
 
 	private: System::Void UpdateInfo(String^ artist, String^ title);
-	private: System::Void SendLcd(char* artist, char* title);
+	private: System::Void SendLcd(String^ artist, String^ title);
 	private: System::Void TreyBalloon(String^ artist, String^ title);
 		
 	

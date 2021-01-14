@@ -109,7 +109,6 @@ namespace AIMPgui {
 			// 
 			// settings_tabs
 			// 
-			this->settings_tabs->Appearance = System::Windows::Forms::TabAppearance::Buttons;
 			this->settings_tabs->Controls->Add(this->tabPage1);
 			this->settings_tabs->Controls->Add(this->tabPage2);
 			this->settings_tabs->Controls->Add(this->tabPage3);
@@ -122,10 +121,10 @@ namespace AIMPgui {
 			// tabPage1
 			// 
 			this->tabPage1->Controls->Add(this->splitContainer1);
-			this->tabPage1->Location = System::Drawing::Point(4, 25);
+			this->tabPage1->Location = System::Drawing::Point(4, 22);
 			this->tabPage1->Name = L"tabPage1";
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage1->Size = System::Drawing::Size(280, 191);
+			this->tabPage1->Size = System::Drawing::Size(280, 194);
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Main settings";
 			this->tabPage1->UseVisualStyleBackColor = true;
@@ -144,7 +143,7 @@ namespace AIMPgui {
 			// 
 			this->splitContainer1->Panel2->Controls->Add(this->label3);
 			this->splitContainer1->Panel2->Controls->Add(this->tb_timer_interval);
-			this->splitContainer1->Size = System::Drawing::Size(274, 185);
+			this->splitContainer1->Size = System::Drawing::Size(274, 188);
 			this->splitContainer1->SplitterDistance = 91;
 			this->splitContainer1->TabIndex = 0;
 			// 
@@ -176,10 +175,10 @@ namespace AIMPgui {
 			// tabPage2
 			// 
 			this->tabPage2->Controls->Add(this->splitContainer2);
-			this->tabPage2->Location = System::Drawing::Point(4, 25);
+			this->tabPage2->Location = System::Drawing::Point(4, 22);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage2->Size = System::Drawing::Size(280, 191);
+			this->tabPage2->Size = System::Drawing::Size(280, 194);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"COM port";
 			this->tabPage2->UseVisualStyleBackColor = true;
@@ -197,7 +196,7 @@ namespace AIMPgui {
 			// splitContainer2.Panel2
 			// 
 			this->splitContainer2->Panel2->Controls->Add(this->cb_com_selection);
-			this->splitContainer2->Size = System::Drawing::Size(274, 185);
+			this->splitContainer2->Size = System::Drawing::Size(274, 188);
 			this->splitContainer2->SplitterDistance = 91;
 			this->splitContainer2->TabIndex = 0;
 			// 
@@ -222,10 +221,10 @@ namespace AIMPgui {
 			// tabPage3
 			// 
 			this->tabPage3->Controls->Add(this->splitContainer3);
-			this->tabPage3->Location = System::Drawing::Point(4, 25);
+			this->tabPage3->Location = System::Drawing::Point(4, 22);
 			this->tabPage3->Name = L"tabPage3";
 			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage3->Size = System::Drawing::Size(280, 191);
+			this->tabPage3->Size = System::Drawing::Size(280, 194);
 			this->tabPage3->TabIndex = 2;
 			this->tabPage3->Text = L"Tray";
 			this->tabPage3->UseVisualStyleBackColor = true;
@@ -246,7 +245,7 @@ namespace AIMPgui {
 			this->splitContainer3->Panel2->Controls->Add(this->tb_baloon_time);
 			this->splitContainer3->Panel2->Controls->Add(this->cb_balloon);
 			this->splitContainer3->Panel2->Controls->Add(this->cb_start);
-			this->splitContainer3->Size = System::Drawing::Size(274, 185);
+			this->splitContainer3->Size = System::Drawing::Size(274, 188);
 			this->splitContainer3->SplitterDistance = 111;
 			this->splitContainer3->TabIndex = 0;
 			// 
@@ -303,7 +302,7 @@ namespace AIMPgui {
 			this->btn_save->Name = L"btn_save";
 			this->btn_save->Size = System::Drawing::Size(75, 23);
 			this->btn_save->TabIndex = 1;
-			this->btn_save->Text = L"Save";
+			this->btn_save->Text = L"Apply";
 			this->btn_save->UseVisualStyleBackColor = true;
 			this->btn_save->Click += gcnew System::EventHandler(this, &SettingsForm::btn_save_Click);
 			// 

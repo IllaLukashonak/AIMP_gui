@@ -69,6 +69,7 @@ System::Void AIMPgui::MyForm::UpdateAll() {
 	}
 	
 	UpdateInfo(artist, title);
+	SendLcd(artist, title);
 }
 
 System::Void AIMPgui::MyForm::UpdateInfo(String^ artist, String^ title) {
@@ -76,7 +77,11 @@ System::Void AIMPgui::MyForm::UpdateInfo(String^ artist, String^ title) {
 	lb_SongName->Text = title;
 }
 
-System::Void AIMPgui::MyForm::SendLcd(char* artist, char* title) {
+System::Void AIMPgui::MyForm::SendLcd(String^ artist, String^ title) {
+	serialPort1->PortName = System::Configuration::ConfigurationManager::AppSettings["com"];
+	serialPort1->Open();
+	serialPort1->Write("start_trans|" + artist + "|" + title + "|");
+	serialPort1->Close();
 }
 
 System::Void AIMPgui::MyForm::TreyBalloon(String^ artist, String^ title) {
